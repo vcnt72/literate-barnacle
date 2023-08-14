@@ -1,10 +1,9 @@
 # Employee CRUD Tech Docs
 
----
 
 ## Preface
 
----
+
 
 Following are documentation of the employee CRUD apps. The documentation are consist of :
 
@@ -13,7 +12,6 @@ Following are documentation of the employee CRUD apps. The documentation are con
 
 ## Database
 
----
 
 Database are using PostgreSQL 15.4. The following are ERD (Entity Relationship Diagram) to explain how entity are
 structured and how are relationship between them.
@@ -37,16 +35,15 @@ Table: employees
 
 This table contains information of employee.
 
-| Name     | Type    | Description                                                                                                                                                               |
-|----------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id       | numeric | Primary Key. Id of the employee, the value are declared by users.                                                                                                         |
-| grade_id | int4    | Employee grade id. It's explain the employee grades in 1 organizations. The text value are being declared on code. <br/>- 1: Manager<br/>- 2: Supervisor<br/>- 3: Manager |
-| user_id  | int8    | Foreign key for table users.                                                                                                                                              |
-| salary   | numeric | Salary of the employee. numeric is big integer representation in postgres because it can store number with a lot of digits                                                |
+| Name     | Type    | Description                                                                                                                                                                                                                                   |
+|----------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| id       | numeric | Primary Key. Id of the employee, the value are declared by users.                                                                                                                                                                             |
+| grade_id | int4    | Employee grade id. It's explain the employee grades in 1 organizations. The text value are being declared on code. The grade id are statically mapped as follow. (grade_id:grade_name) <br/>- 1: Manager<br/>- 2: Supervisor<br/>- 3: Manager |
+| user_id  | int8    | Foreign key for table users.                                                                                                                                                                                                                  |
+| salary   | numeric | Salary of the employee. numeric is big integer representation in postgres because it can store number with a lot of digits                                                                                                                    |
 
 ## API Docs
 
----
 
 The base response are as follows :
 
