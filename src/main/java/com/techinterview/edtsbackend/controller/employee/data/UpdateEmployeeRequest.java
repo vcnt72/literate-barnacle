@@ -11,6 +11,7 @@ public record UpdateEmployeeRequest(
 
         @Size(min = 1, max = 40)
         @NotNull
+        @NotBlank
         String name,
         @Min(1)
         @Max(3)
